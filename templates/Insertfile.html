@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Inseting Data</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    h2{
+        font-family: "Calibri Light";
+        text-align: center;
+        background-color: cornsilk;
+        color: blue;
+        margin: 0px;
+    }
+    body{
+        background-color: aqua;
+    }
+    form{
+        margin-top: 10px;
+        border: 2px solid red;
+        padding: 10px;
+        background-color: darkgoldenrod;
+        border-radius: 10px;
+        color: yellow;
+    }
+</style>
+</head>
+<body>
+<h2>Plz Enter Your Product details</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-6">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <br>
+                <center>
+                <input type="submit" value="Submit" class="btn btn-success">
+                <input type="reset" value="Reset" class="btn btn-danger">
+                    </center>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

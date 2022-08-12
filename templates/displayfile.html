@@ -1,0 +1,55 @@
+
+<html>
+<head>
+<title>Dispaying products</title>
+    <style>
+        h2{
+            font-size: 30px;
+            font-family: Calibri;
+            color: red;
+            text-align: center;
+        }
+        table{
+            text-align: center;
+            left: 100px;
+            background-color: aqua;
+        }
+        body{
+            background-color: seashell;
+        }
+    </style>
+</head>
+<body>
+<h2>Your Product Details</h2>
+<table border="2px">
+    <thead>
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Product Cost</th>
+        <th>Product Color</th>
+        <th>Quantity</th>
+        <th>Product Class</th>
+        <th>Product Mfg Date</th>
+        <th>Product Exp date</th>
+    </tr>
+    </thead>
+    <tbody>
+
+        {% for i in data %}
+            <tr>
+            <td>{{ i.pid }}</td>
+            <td>{{ i.pname }}</td>
+            <td>{{ i.pcost }}</td>
+            <td>{{ i.pcolor }}</td>
+            <td>{{ i.quantity }}</td>
+            <td>{{ i.pclass }}</td>
+            <td>{{ i.pmdate }}</td>
+            <td>{{ i.pedate }}</td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+</body>
+</html>
